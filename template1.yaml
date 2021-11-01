@@ -8,11 +8,12 @@
                 "RoleArn": "arn:aws:iam::193190271869:role/eks",
                 "ResourcesVpcConfig": {
                     "SecurityGroupIds": [
-                        "sg-0997170089a8d67c9"
+                        "sg-4eb7de03"
                     ],
                     "SubnetIds": [
-                        "subnet-31a74f5a",
-                        "subnet-78c09e34"
+                        "subnet-fe5ee898",
+                        "subnet-4a5b3613",
+                        "subnet-cc66c084"
                     ]
                 }
             }
@@ -30,8 +31,9 @@
                 },
                 
                 "Subnets": [
-                    "subnet-31a74f5a",
-                    "subnet-78c09e34"
+                    "subnet-fe5ee898",
+                        "subnet-4a5b3613",
+                        "subnet-cc66c084"
                 ]
             },
             "DependsOn": [
