@@ -1,0 +1,42 @@
+{
+    "Resources": {
+        "myCluster": {
+            "Type": "AWS::EKS::Cluster",
+            "Properties": {
+                "Name": "prod",
+                "Version": "1.21",
+                "RoleArn": "arn:aws:iam::193190271869:role/eks",
+                "ResourcesVpcConfig": {
+                    "SecurityGroupIds": [
+                        "sg-0997170089a8d67c9"
+                    ],
+                    "SubnetIds": [
+                        "subnet-31a74f5a",
+                        "subnet-78c09e34"
+                    ]
+                }
+            }
+        },
+        
+        "EKSNodegroup": {
+            "Type": "AWS::EKS::Nodegroup",
+            "Properties": {
+                "ClusterName": "prod",
+                "NodeRole": "arn:aws:iam::193190271869:role/awsnode",
+                "ScalingConfig": {
+                    
+                    "DesiredSize": 3
+                    
+                },
+                
+                "Subnets": [
+                    "subnet-31a74f5a",
+                    "subnet-78c09e34"
+                ]
+            },
+            "DependsOn": [
+                "myCluster"
+            ]
+        }
+    }
+}
