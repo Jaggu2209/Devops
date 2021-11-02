@@ -11,6 +11,9 @@
                         "sg-764fcb34"
                     ],
                     "SubnetIds": [
+                        "subnet-320be268",
+                        "subnet-d70284fc",
+                        "subnet-966bd4de"
                         
                     ]
                 }
